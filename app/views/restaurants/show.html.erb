@@ -1,0 +1,9 @@
+
+<%= image_tag @restaurant.photo %>
+<%= @restaurant.name %>
+
+<%= pluralize(@restaurant.posts.count, 'post') %>
+
+<% @restaurant.posts.each do |post| %>
+    <%= image_tag post.photo %>
+<% end %>
