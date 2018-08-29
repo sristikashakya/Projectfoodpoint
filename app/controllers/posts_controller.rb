@@ -38,7 +38,9 @@ class PostsController < ApplicationController
 
 	private
 	def is_owner?
-	   redirect_to root_path if Post.find(params[:id]).user != current_user
+	   if(Post.find(params[:id]).restaurant != current_restaurant)
+	   	redirect_to root_path 
+	   end
 	end
 	def post_params
 		params.require(:post).permit(:restaurant_id, :photo, :description)
