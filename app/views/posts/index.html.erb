@@ -10,11 +10,15 @@
   <% end %>
 	<% post.comments.each do |comment| %>
 		<p><%= comment.restaurant.name %> <%= comment.text %></p>
+		<% if comment.restaurant == current_restaurant %>
+			<%= link_to 'Delete Comment', post_comment_path(post_id: post.id, id: comment.id), method: :delete %>
+		<% end %>
 	<% end %>
 	<% if restaurant_signed_in? %>
 		<%= simple_form_for Comment.new, url: post_comments_path(post), method: :post do |f| %>
 			<%= f.input :text, label: 'Review', placeholder: 'Add a review...' %>
-			<%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+			<%= f.submit 'Comment', class: 'btn btn-primary btn-block' %>
 		<% end %>
+		
 	<% end %>
 <% end %>
