@@ -35,6 +35,10 @@ class PostsController < ApplicationController
 	  @post.destroy
 	  redirect_to root_path
 	end
+	def upvote
+	end
+	def downvote
+	end
 
 	private
 	def is_owner?
