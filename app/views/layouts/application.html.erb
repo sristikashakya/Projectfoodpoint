@@ -11,6 +11,7 @@
   <body>
 	<nav>
 		<% if restaurant_signed_in? %>
+			<%= link_to 'New Post', new_post_path %>
 			<%= link_to 'Edit Settings', edit_restaurant_registration_path %>
 			<%= link_to 'Log Out', destroy_restaurant_session_path, method: :delete %>	
 		 <% else %>
