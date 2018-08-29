@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	before_action :authenticate_restaurant!, only: [:new, :create]
-	before_action :is_owner?, only: [:edit, :update]		
+	before_action :is_owner?, only: [:edit, :update, :destroy]		
 	def create
 		@post = current_restaurant.posts.create(post_params)
 			if @post.valid?
@@ -26,6 +26,11 @@ class PostsController < ApplicationController
 		else
 			render :edit, status: :unprocessable_entity
 		end
+	end
+	def destroy
+	  @post = Post.find(params[:id])
+	  @post.destroy
+	  redirect_to root_path
 	end
 
 	private
