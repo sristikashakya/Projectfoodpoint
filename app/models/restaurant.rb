@@ -4,4 +4,5 @@ class Restaurant < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          mount_uploader :photo, PhotoUploader
+  has_many :posts
 end
