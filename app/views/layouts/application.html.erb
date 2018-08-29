@@ -10,15 +10,28 @@
 
   <body>
 	<nav>
-		<% if restaurant_signed_in? %>
-			<%= link_to 'New Post', new_post_path %>
-			<%= link_to 'Edit Settings', edit_restaurant_registration_path %>
-			<%= link_to 'Log Out', destroy_restaurant_session_path, method: :delete %>	
-		 <% else %>
-			<%= link_to 'Sign Up', new_restaurant_registration_path %>
-			<%= link_to 'Log In', new_restaurant_session_path %>
-		<% end %>
-		
+	  <div class="row">
+	    <div class = "col-lg-6 col-lg-offset-3">
+	      <div class="row">
+	        <div class="nav_wrapper">
+
+	        <div class="col-xs-1">
+				<span class="pull-left brand"><%= image_tag("fp.jpg", :size => "220x91") %></span>
+			</div>
+			<div class="col-xs-11">
+					<% if restaurant_signed_in? %>
+						<span class="nav_links pull-right"><%= link_to 'New Post', new_post_path %>
+						<span class="nav_links pull-right"><%= link_to 'Edit Settings', edit_restaurant_registration_path %>
+						<span class="nav_links pull-right"><%= link_to 'Log Out', destroy_restaurant_session_path, method: :delete %>	
+					 <% else %>
+						<span class="nav_links pull-right"><%= link_to 'Sign Up', new_restaurant_registration_path %>
+						<span class="nav_links pull-right"><%= link_to 'Log In', new_restaurant_session_path %>
+					<% end %>
+				</div>
+			</div>
+	      </div>
+	    </div>
+	  </div>
 	</nav>  
     <%= yield %>
   </body>
