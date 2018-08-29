@@ -7,7 +7,7 @@
       		<span class="timestamp pull-right"><%= distance_of_time_in_words(DateTime.now, post.created_at) %> ago</span>
       	</div>
 
-		  <center><%= image_tag post.photo, class: 'photo' %></center>
+		  <center><%=link_to image_tag post.photo, class: 'photo' %></center>
 
 		<div class="post_body">
 			<%= link_to post.restaurant.name, restaurant_path(post.restaurant_id) %> <%= post.description %>
@@ -21,7 +21,7 @@
 
 		 <div class="post_comments">
 			<% post.comments.each do |comment| %>
-				<p><%= comment.restaurant.name %> <%= comment.text %></p>
+				<h4><%= comment.restaurant.name %></h4><%= comment.text %>
 				<% if comment.restaurant == current_restaurant %>
 					<%= link_to 'Delete Comment', post_comment_path(post_id: post.id, id: comment.id), method: :delete %>
 				<% end %>

@@ -1,9 +1,46 @@
+<div class="prof_header">
 
-<%= image_tag @restaurant.photo %>
-<%= @restaurant.name %>
+  <div class="row">
 
-<%= pluralize(@restaurant.posts.count, 'post') %>
+    <div class="col-xs-4">
+      <%= image_tag @restaurant.photo, class: 'prof_pic' %>
+    </div>
 
-<% @restaurant.posts.each do |post| %>
-    <%= image_tag post.photo %>
-<% end %>
+    <div class="col-xs-8">
+
+      <div class="restaurant_header">
+
+        <div class="row">
+          <div class="col-xs-6">
+            <h1 class = "restaurantname"><%= @restaurant.name %></h1>
+          </div>
+
+          <div class="col-xs-6">
+            <%= link_to 'EDIT PROFILE', edit_restaurant_registration_path(@restaurant), class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %>
+          </div>
+        </div>  
+      </div>
+
+      <span class="count"><%= @restaurant.posts.count %></span> posts
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="prof_post_box">
+
+  <div class="row distance">
+
+    <% @restaurant.posts.each do |post| %>
+
+        <div class="col-xs-6">
+          <%= image_tag post.photo, class: 'prof_show' %>
+        </div>
+
+    <% end %>
+
+  </div>
+</div>
