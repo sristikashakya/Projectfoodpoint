@@ -6,4 +6,5 @@ class Restaurant < ApplicationRecord
          mount_uploader :photo, PhotoUploader
   has_many :posts
   has_many :comments
+  acts_as_voter
 end
