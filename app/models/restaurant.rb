@@ -5,4 +5,5 @@ class Restaurant < ApplicationRecord
          :recoverable, :rememberable, :validatable
          mount_uploader :photo, PhotoUploader
   has_many :posts
+  has_many :comments
 end
