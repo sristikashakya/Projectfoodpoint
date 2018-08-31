@@ -128,4 +128,21 @@ nav {
   .fa {
     font-size: 30px;
   }
-}	
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+    width: 50px !important;
+}
+.stylish-input-group{
+  margin-top: 30px;
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+	
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}

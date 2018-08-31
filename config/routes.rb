@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   	resources :downvotes, only: :create
   end
   resources :restaurants, only: :show
+  resources :search, only: [:index] 
+  get 'map' => 'static_pages#map'
 end
