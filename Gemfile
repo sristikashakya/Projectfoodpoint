@@ -39,9 +39,11 @@ gem 'simple_form'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'font-awesome-sass', '~> 4.6.2'
 gem 'pg_search'
+gem 'cancan'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
 end
 
 group :development do

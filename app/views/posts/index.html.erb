@@ -1,6 +1,7 @@
-
 <% @posts.each do |post| %>
+
 	<div class="post_box">
+
 		<div class="post_header">
 			<%= image_tag post.restaurant.photo, class: 'prof_pic_small' %>
       		<%= link_to post.restaurant.name, restaurant_path(post.restaurant_id) %>
@@ -22,9 +23,9 @@
 			<%= render partial: 'likes', locals: {post: post} %>
 		</span>
 
-		 <div class="post_comments">
+			 <div class="post_comments">
 			<% post.comments.each do |comment| %>
-				<h4><%= comment.restaurant.name %></h4><%= comment.text %>
+				<p><%= comment.restaurant.name %><%= comment.text %></p>
 				<% if comment.restaurant == current_restaurant %>
 					<%= link_to 'Delete Comment', post_comment_path(post_id: post.id, id: comment.id), method: :delete %>
 				<% end %>

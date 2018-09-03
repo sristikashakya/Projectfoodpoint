@@ -1,9 +1,12 @@
-<h1>Edit Post</h1>
-
-		<%= simple_form_for @post do |f| %>
-		  <%= f.input :photo %>
-		  <%= f.input :description %>
-		  <%= f.submit 'Update', class: 'btn btn-default btn-block' %>
-		<% end %>	
+<div class = "card edits">
+	<h2>Edit Post</h2>
+	<hr>
+	<%= simple_form_for @post do |f| %>
+	  <strong><%= f.input :photo %></strong>
+	  <strong><%= f.input :description %></strong>
+	  <strong><%= f.submit 'Update', class: 'btn btn-default btn-block' %></strong>
+	<% end %>
+</div>
 	
+
 
