@@ -1,3 +1,14 @@
+
+$primary-font: 'Open Sans', sans-serif;  
+$secondary-font: 'Dosis', sans-serif;  
+
+.navbar-default {
+  font-family: $secondary-font;
+}
+  
+html, body {
+  font-family: $primary-font;
+}
 body {
   background-color: #FAFAFA;
 }

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	before_action :authenticate_restaurant!, only: [:new, :create]
-	before_action :is_owner?, only: [:edit, :update, :destroy]		
+	before_action :is_restaurant_owner?, only: [:edit, :update, :destroy]	
+	before_action :is_owner?, only: [:new, :create]
 	def create
 		@post = current_restaurant.posts.create(post_params)
 			if @post.valid?
@@ -41,10 +42,16 @@ class PostsController < ApplicationController
 	end
 
 	private
-	def is_owner?
+	def is_restaurant_owner?
 	   if(Post.find(params[:id]).restaurant != current_restaurant)
 	   	redirect_to root_path 
 	   end
+	end
+
+	def is_owner?
+		unless current_restaurant.user_type == "owner"
+			redirect_to root_path
+		end
 	end
 	def post_params
 		params.require(:post).permit(:restaurant_id, :photo, :description)

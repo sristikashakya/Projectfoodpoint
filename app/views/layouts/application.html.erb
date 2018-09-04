@@ -3,7 +3,7 @@
   <head>
     <title>Projectfoodpoint</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans:300,400,600,700" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
@@ -33,7 +33,8 @@
 						<span class="nav_links pull-right"><%= link_to 'Edit Settings', edit_restaurant_registration_path %>
 						<span class="nav_links pull-right"><%= link_to 'Log Out', destroy_restaurant_session_path, method: :delete %>	
 					 <% else %>
-						<span class="nav_links pull-right"><%= link_to 'Sign Up', new_restaurant_registration_path %>
+						<span class="nav_links pull-right"><%= link_to 'Sign up', new_restaurant_registration_path %>		
+	
 						<span class="nav_links pull-right"><%= link_to 'Log In', new_restaurant_session_path %>
 					<% end %>
 				</div>
