@@ -9,24 +9,31 @@
   </head>
 
   <body>
-	<nav>
+	<nav class="navbar navbar-expand-sm  mb-3 ">
 	  <div class="row">
 	    <div class = "col-lg-6 col-lg-offset-3">
 	      <div class="row">
 	        <div class="nav_wrapper">
 
-	        <div class="col-xs-3">
+	        <div class="col-md-1">
 				<span class="pull-left brand"><%=link_to image_tag("fp.jpg", :size => "220x91"),root_path %></span>
 			</div>
 
-			<div class="col-xs-3">
-				<%= form_tag(search_index_path, method: "get") do %>
-				  <%= text_field_tag(:query) %>
+		
+			<div class="col-md-5" style="margin-top:5px;">
+				<div class="input-group container my-2">
+					
+				<%= form_tag(search_index_path, method: "get")do %>
+				 <%= text_field_tag(:query)%>
 				  <%= submit_tag("Search") %>
 				<% end %>
+			
 			</div>
+		</div>
 
-			<div class="col-xs-6">
+			
+
+			<div class="col-md-6">
 					<span class="nav_links pull-right"><%= link_to 'Map', map_path %>
 					<% if restaurant_signed_in? %>
 						<span class="nav_links pull-right"><%= link_to 'New Post', new_post_path %>

@@ -3,7 +3,7 @@
 		<hr>
 		<%= simple_form_for @post do |f| %>
 		  <%= f.input :photo %>
-		  <%= f.input :description %>
-		  <%= f.submit 'Post' %>
+		  <%= f.input :description ,class:'form-control'%>
+		  <%= f.submit 'Post', class:'btn btn-block btn-primary' %>
 		<% end %>
 </div>
