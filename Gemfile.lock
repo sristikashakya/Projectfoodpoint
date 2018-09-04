@@ -52,7 +52,6 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
-    cancan (1.6.10)
     carrierwave (1.2.3)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -205,7 +204,6 @@ DEPENDENCIES
   annotate
   bootstrap-sass (~> 3.3.6)
   byebug
-  cancan
   carrierwave
   coffee-rails (~> 4.2)
   devise

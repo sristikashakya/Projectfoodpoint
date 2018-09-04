@@ -9,6 +9,13 @@ Rails.application.routes.draw do
   end
   resources :restaurants, only: :show
   resources :search, only: [:index] 
+  resources :chat, only: :index
+  resources :conversations, only: [:create] do
+    resources :messages, only: [:create]
+    member do
+      post :close
+    end
+  end
   get 'map' => 'static_pages#map'
   get 'mail' => 'static_pages#mail'
 end

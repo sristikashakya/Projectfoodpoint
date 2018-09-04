@@ -30,6 +30,9 @@ class Restaurant < ApplicationRecord
   include PgSearch 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
+
   acts_as_voter
  
   pg_search_scope :search, against: [:name]

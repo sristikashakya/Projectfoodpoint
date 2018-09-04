@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  restaurant: one
+  conversation: one
+
+two:
+  body: MyText
+  restaurant: two
+  conversation: two
