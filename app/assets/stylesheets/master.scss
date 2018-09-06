@@ -8,15 +8,21 @@ $secondary-font: 'Dosis', sans-serif;
   
 html, body {
   font-family: $primary-font;
+
+
 }
 body {
-  background-color: #FAFAFA;
+  background-color: #cecdb9;
+}
+.back{
+  background-image: image-url('abc.jpeg');
+background-size: 100%;
 }
 
 nav {
   border-bottom: 1px solid #dbdbdb;
-  background-color: #ffffff;
-  height: 95px;
+  background-color: rgba(255,255,255,0.5);
+  height: 80px;
 }
 
 ul {
@@ -40,6 +46,12 @@ ul {
 }
 .brand{
 	margin-left:-150px;
+  font-family: $secondary-font;
+  font-size: 35px;
+}
+.brand a{
+  text-decoration: none;
+  color: green;
 }
 .nav_links {
 	margin-right:-50px;	
@@ -164,7 +176,7 @@ ul {
 }
 
 .edits{
-    background-color: #e2f7b9;
+    background-color: rgba(255,255,255,0.5);
     width: 400px;
     height:450px;;
     margin-left: 474px;
@@ -176,7 +188,7 @@ ul {
     transition: 0.3s;
 }
 .devise-edits{
-  background-color: #e2f7b9;
+  background-color: rgba(255,255,255,0.5);
     width: 400px;
     height:640px;;
     margin-left: 474px;
@@ -216,3 +228,21 @@ ul {
   padding: 10px;
   float: left;
 } 
+.position{
+     margin-top: -77px;
+    margin-left: 41px;
+    margin-right: -132px;
+}
+.position-form{
+  height: 50px;
+}
+.font{
+  font-size:2.5rem;
+  color:green;
+}
+.text{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size:3rem;
+  color:#232526;
+}

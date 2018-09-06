@@ -16,7 +16,7 @@
           </div>
 
           <div class="col-xs-6">
-            <%= link_to 'EDIT PROFILE', edit_restaurant_registration_path(@restaurant), class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %><hr>
+            <%= link_to 'EDIT PROFILE', edit_restaurant_registration_path(@restaurant), class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %><br>
             <%= link_to 'Mail Received', mail_path, class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %>
           </div>
         </div>  

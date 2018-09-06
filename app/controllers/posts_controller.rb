@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 	def create
 		@post = current_restaurant.posts.create(post_params)
 			if @post.valid?
-			redirect_to root_path
+			redirect_to posts_path
 			else
 			render :new, status: :unprocessable_entity
 			end
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 		@post.update(post_params)
 		if @post.valid?
-			redirect_to root_path
+			redirect_to posts_path
 		else
 			render :edit, status: :unprocessable_entity
 		end
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 	def destroy
 	  @post = Post.find(params[:id])
 	  @post.destroy
-	  redirect_to root_path
+	  redirect_to posts_path
 	end
 	def upvote
 	end
@@ -44,13 +44,13 @@ class PostsController < ApplicationController
 	private
 	def is_restaurant_owner?
 	   if(Post.find(params[:id]).restaurant != current_restaurant)
-	   	redirect_to root_path 
+	   	redirect_to posts_path 
 	   end
 	end
 
 	def is_owner?
 		unless current_restaurant.user_type == "owner"
-			redirect_to root_path
+			redirect_to posts_path
 		end
 	end
 	def post_params
