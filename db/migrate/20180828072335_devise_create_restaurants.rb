@@ -33,6 +33,8 @@ class DeviseCreateRestaurants < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
 
       t.string :name
+      t.string :location
+      t.integer :contact
       t.timestamps null: false
     end
 

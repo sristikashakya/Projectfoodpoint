@@ -15,7 +15,7 @@
       <div class="panel-body">
         <ul>
           <% @restaurants.each do |restaurant| %>
-            <li><%= link_to restaurant.email, conversations_path(restaurant_id: restaurant), remote: true, method: :post %></li>
+            <li><%= link_to restaurant.name, conversations_path(restaurant_id: restaurant), remote: true, method: :post %></li>
           <% end %>
         </ul>
       </div>

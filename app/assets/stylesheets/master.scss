@@ -8,15 +8,19 @@ $secondary-font: 'Dosis', sans-serif;
   
 html, body {
   font-family: $primary-font;
-
+  height: 100%;
+  width: 100%;
 
 }
 body {
   background-color: #cecdb9;
 }
 .back{
-  background-image: image-url('abc.jpeg');
-background-size: 100%;
+  background-image: image-url('abc.jpeg'); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 nav {
@@ -52,6 +56,7 @@ ul {
 .brand a{
   text-decoration: none;
   color: green;
+  letter-spacing: 4px;  
 }
 .nav_links {
 	margin-right:-50px;	
@@ -210,7 +215,16 @@ ul {
   overflow-x: hidden;
 }
  
- 
+ .hello{
+      height: 128px;
+    width: 275px;
+    margin-left: 40px;
+ }
+ .restro{
+      height: 200px;
+    width: 275px;
+    margin-left: 40px;
+ }
 .message-sent {
   position: relative;
   background-color: #D9EDF7;

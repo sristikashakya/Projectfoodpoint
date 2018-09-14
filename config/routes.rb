@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   end
   get 'map' => 'static_pages#map'
   get 'mail' => 'static_pages#mail'
+  get '/location' => 'restaurants#location'
+  get '/contact' => 'restaurants#contact'
 end
  

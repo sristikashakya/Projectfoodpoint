@@ -11,13 +11,22 @@
       <div class="restaurant_header">
 
         <div class="row">
-          <div class="col-xs-6">
+          <div class="col-xs-3">
             <h1 class = "restaurantname"><%= @restaurant.name %></h1>
           </div>
-
+          <div class="col-xs-3">
+           
+          <button type="button" class="restaurant_edit_button btn btn-default" data-toggle="modal" data-target="#myModal">
+          LOCATION
+          </button>
+         <br>
+          <button type="button" class="restaurant_edit_button btn btn-default" data-toggle="modal" data-target="#myModal1">
+            CONTACT
+          </button>
+          </div>
           <div class="col-xs-6">
-            <%= link_to 'EDIT PROFILE', edit_restaurant_registration_path(@restaurant), class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %><br>
-            <%= link_to 'Mail Received', mail_path, class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %>
+            <%= link_to 'EDIT PROFILE', edit_restaurant_registration_path(@restaurant), class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %><br><br>
+            <%= link_to 'MAIL RECEIVED', mail_path, class: 'restaurant_edit_button btn btn-default' if restaurant_signed_in? && @restaurant == current_restaurant %>
           </div>
         </div>  
       </div>
@@ -43,5 +52,38 @@
 
     <% end %>
 
+  </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <h1><%= @restaurant.location%></h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <h1><%= @restaurant.phone%></h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
