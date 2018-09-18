@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :restaurants
+  devise_for :restaurants, :controllers => { registrations: 'devise/registrations' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
   resources :posts do
@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   end
   get 'map' => 'static_pages#map'
   get 'mail' => 'static_pages#mail'
-  get '/location' => 'restaurants#location'
-  get '/contact' => 'restaurants#contact'
+
 end
  

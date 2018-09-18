@@ -1,5 +1,9 @@
+<html>
+<body class="back1">
 <div class="card edits"> 
 <% @restaurants.each do |restaurant| %>
 	<h2><%= link_to restaurant.name,restaurant_path(restaurant.id) %></h2>
 <% end %>
 </div>
+</body>
+</html>

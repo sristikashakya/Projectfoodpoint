@@ -36,6 +36,16 @@
     <%= f.password_field :current_password, autocomplete: "off", class:'form-control' %>
   </div>
 
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location, autofocus: true, required: true,class:'form-control' %>
+  </div>
+
+   <div class="field">
+    <%= f.label :Phone_number %><br />
+    <%= f.text_field :phone, autofocus: true, required: true,class:'form-control' %>
+  </div>
+
   <br/>
 
   <div class="actions">

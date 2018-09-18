@@ -22,6 +22,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.back1{
+  background-image: image-url('blur5.jpeg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 nav {
   border-bottom: 1px solid #dbdbdb;
@@ -39,7 +46,11 @@ ul {
   font-weight: 500;
   margin: 0 20px;
 }
-
+.edits a{
+  text-decoration:none; 
+  color: green;
+  font-family: $secondary-font;
+}
 .nav_wrapper {
   line-height: 78px;
 
@@ -134,6 +145,7 @@ ul {
 .prof_post_box {
   margin-bottom: 50px;
   margin-left: 200px;
+  margin-top: -400px;
 }
 
 .user_edit_button {
@@ -183,7 +195,7 @@ ul {
 .edits{
     background-color: rgba(255,255,255,0.5);
     width: 400px;
-    height:450px;;
+    height:500px;;
     margin-left: 474px;
     margin-top: 90px;
     padding: 20px 20px 20px 20px;
@@ -195,7 +207,7 @@ ul {
 .devise-edits{
   background-color: rgba(255,255,255,0.5);
     width: 400px;
-    height:640px;;
+    height:700px;;
     margin-left: 474px;
     margin-top: 90px;
     padding: 20px 20px 20px 20px;
@@ -259,4 +271,7 @@ ul {
   font-weight: 700;
   font-size:3rem;
   color:#232526;
+}
+#dropdownMenuButton{
+  color:green;
 }

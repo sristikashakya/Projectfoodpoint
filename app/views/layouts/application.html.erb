@@ -42,15 +42,16 @@
 					<% if restaurant_signed_in? %>
 						<span class="nav_links pull-right"><%= link_to 'Chat', chat_index_path %>
 						<div class="dropdown position">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							SETTINGS
+							<button class="restaurant_edit_button btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Settings
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<li><%= link_to 'New Post', new_post_path %></li>
-
-								<li><%= link_to 'Edit Settings', edit_restaurant_registration_path %></li>
-								<li><%= link_to 'Log Out', destroy_restaurant_session_path, method: :delete %></li>
+								
+									<li><%= link_to 'New Post', new_post_path %></li>
+									<li><%= link_to 'Edit Settings', edit_restaurant_registration_path %></li>
+									<li><%= link_to 'Log Out', destroy_restaurant_session_path, method: :delete %></li>
 							</div>
+							<%= link_to 'Profile', restaurant_path(current_restaurant.id) %>
 						</div>
 							
 					 <% else %>
